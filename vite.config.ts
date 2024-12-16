@@ -3,6 +3,7 @@ import react from '@vitejs/plugin-react';
 import { defineConfig } from 'vite';
 
 export default defineConfig({
+  base: '/todo-mindbox-test/',
   plugins: [react()],
   server: {
     port: 3000,
