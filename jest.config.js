@@ -6,11 +6,12 @@ const config = {
   testEnvironment: 'jsdom',
   setupFilesAfterEnv: ['<rootDir>/src/setup-tests.ts'],
   transform: {
-    '^.+\\.(ts|tsx)$': 'babel-jest',
+    '^.+\\.tsx?$': 'ts-jest',
   },
-  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node', 'ts', 'tsx'],
+  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
   moduleNameMapper: {
     '^.+\\.svg$': 'jest-svg-transformer',
+    '^@/(.*)$': '<rootDir>/src/$1',
     '^.+\\.css$': 'identity-obj-proxy',
   },
 };
